@@ -25,7 +25,7 @@ input_text <- c("this is a bunch of junk text",
                   "trying to break it 1234, - / , -..",
                   "hi", 
                   "this is my text data",
-                  "abuse notes")
+                  "some notes")
 
 text_df <- data.frame(KEY_CASE, input_text)
 
