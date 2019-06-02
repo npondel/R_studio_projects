@@ -1,2 +1,3 @@
-# R_studio_projects
-Various code for R studio projects and ideas
+## NCH project Rstudio Examples
+
+R code examples
