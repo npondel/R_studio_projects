@@ -1,5 +1,6 @@
-### Nick Pondel
-### Ohio State University MPH student in Biomedical Informatics
+# Nick Pondel
+## The Ohio State University
+## MPH student in Biomedical Informatics
 
 ### Culminating Project Code Suppliment
 
