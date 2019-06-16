@@ -4,9 +4,6 @@
 # String search script
 # Version 3
 
-#####################
-# ISSUES TO RESOLVE #
-#####################
 
 ## check packages before installing/running ##
 
