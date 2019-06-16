@@ -83,7 +83,7 @@ match_func <- function(words, text_df){
   }
 
 ###### matching variables to main text ######
-# WARNING - this takes aprox 7 mins
+# WARNING - this will take a long time depending on length of word variables
 match_data <- sapply(word_variables, match_func, text_df = text_data)
 
 
@@ -92,8 +92,8 @@ match_means <- gather(summarize_all(match_data[,2:37], mean))
 match_means <- rename(match_means, c("key"="match_variable", "value"="mean"))
 
 #####  Write out the data  #####
-#write.csv(match_data, file = "8-string_match_data/match_data.csv")
-#write.csv(match_means, file = "8-string_match_data/data_match_means.csv")
+write.csv(match_data, file = "8-string_match_data/match_data.csv")
+write.csv(match_means, file = "8-string_match_data/data_match_means.csv")
 
 ##### Print run time #####
 
