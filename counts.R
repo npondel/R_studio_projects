@@ -1,3 +1,5 @@
+# Utilize the anti_join function to remove stopwords and custom lists of stop words
+
 ##### text data #####
 setwd("S:/RESLeonardJ_NickPondel/0_nick_final/")
 text.data <- read.csv(file = "5-combined_data/joined_records.csv", stringsAsFactors = FALSE)
