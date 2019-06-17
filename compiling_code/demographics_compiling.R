@@ -32,6 +32,9 @@ demographics$Urgency.From.Scene <- as.character(demographics$Urgency.From.Scene)
 #unite columns, ignoring the key_case variable
 united_demographics <- unite(demographics, demo_compiled, remove = TRUE, -1, sep = ",  ")
 
+#remove duplicated record
+united_demographics <- unique(united_demographics)
+
 #verify dataframe structure
 #View(united_demographics)
 
