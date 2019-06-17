@@ -15,6 +15,8 @@ if (!require(tidyr)) {
 }
 ###################
 
+options(stringsAsFactors = FALSE)
+
 #load in all datasets for compiled variables
 demographics <- read.csv(file = "S:/RESLeonardJ_NickPondel/0_nick_final/3-compiled_data/demographics_compiled.csv")
 causes <- read.csv(file = "S:/RESLeonardJ_NickPondel/0_nick_final/3-compiled_data/causes_compiled.csv")
@@ -23,6 +25,15 @@ impressions <- read.csv(file = "S:/RESLeonardJ_NickPondel/0_nick_final/3-compile
 narrative <- read.csv(file = "S:/RESLeonardJ_NickPondel/0_nick_final/3-compiled_data/narrative_compiled.csv")
 preexist <- read.csv(file = "S:/RESLeonardJ_NickPondel/0_nick_final/3-compiled_data/preexist_compiled.csv")
 symptoms <- read.csv(file = "S:/RESLeonardJ_NickPondel/0_nick_final/3-compiled_data/symptoms_compiled.csv")
+
+#remove index number
+demographics$X <- NULL
+causes$X <- NULL
+complaints$X <- NULL
+impressions$X <- NULL
+narrative$X <- NULL
+preexist$X <- NULL
+symptoms$X <- NULL
 
 #nested full join operations
 raw_joined_data <- full_join(narrative, demographics, by = "KEY_CASE") %>%
@@ -44,7 +55,11 @@ joined_data <- data.frame("KEY_CASE" = raw_joined_data$KEY_CASE,
 
 joined_data <- unite(joined_data, all_fields, sep = " // ", remove = TRUE, -1)
 
+#remove blank rows at the end created by join operation
+joined_data <- subset(joined_data, nchar(joined_data$KEY_CASE) > 6, select = c("KEY_CASE", "all_fields"))
+
+
 #view dataset
 #View(joined_data)
 
-write.csv(joined_data,"S:/RESLeonardJ_NickPondel/0_nick_final/5-combined_data/joined_records.csv")
+#write.csv(joined_data,"S:/RESLeonardJ_NickPondel/0_nick_final/5-combined_data/joined_records.csv")
