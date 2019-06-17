@@ -1,3 +1,7 @@
+# NOTE: This is a work in progress
+### TO-DO
+-add stopword removal code to the "counts" file
+
 # Nick Pondel
 ## The Ohio State University
 ## MPH student in Biomedical Informatics
