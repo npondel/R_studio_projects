@@ -1,8 +1,7 @@
-# Nick Pondel
-## The Ohio State University
-## MPH student in Biomedical Informatics
+## Nick Pondel - MPH student in Biomedical Informatics
+### The Ohio State University 
 
-## Culminating Project Code Suppliment
+### Culminating Project Code Suppliment
 
 Hello!  This is the code suppliment to my MPH culminating project.  This code is intended to be an example of the way various project steps were coded and ran.  It was written for a specific dataset, and while it is not "plug and play" for other analysis uses it could be cloned and modified to fit another dataset.
 
