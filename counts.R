@@ -13,7 +13,7 @@ tidy_data <- text.counting %>%
 single_word_list <- tidy_data %>%
   count(word, sort=TRUE) %>%
   anti_join(stopwords) %>%
-  anti_join(custom_stopwords)
+  anti_join(my_stopwords)
 
 single_word_list$n <- NULL
 
