@@ -59,8 +59,10 @@ word_variables <- lapply(excel_sheets("word_vars.xlsx"), read_excel,
 names(word_variables) <- excel_sheets("word_vars.xlsx")
 
 ##### Define function for word variables underscores #####
+## NOTE: on windows, uncomment line 65 and comment out line 64 ##
 under_func_tibble <- function(x){
   y <- x$...1 #create a vector by selecting the first (and only) column per tibble
+ #y <- x$x__1
   y <- gsub("^", "_", y) #add at start of word
   y <- gsub("$", "_", y) #add at end of word
   y <- gsub(" ", "_", y) #replace all spaces
