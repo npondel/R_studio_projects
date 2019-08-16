@@ -1,5 +1,5 @@
-## Nick Pondel - MPH student in Biomedical Informatics
-### The Ohio State University, incoming class of 2016
+## Nick Pondel - MPH in Biomedical Informatics
+### The Ohio State University
 
 ### Culminating Project Code Suppliment
 
